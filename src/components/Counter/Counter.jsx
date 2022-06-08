@@ -3,7 +3,8 @@ import styles from "./counter.module.css";
 
 const Counter = () => {
   // sample value to be replaced
-  let count = 0;
+  // let count = 0;
+  const [count, setCount] = useState(0);
   // NOTE: do not delete `data-testid` key value pair
   return (
     <div className={styles.counter}>
