@@ -61,14 +61,14 @@ export const reducer = (store = initState, { type, payload }) => {
       return {
         ...store,
         todos: store.todos.map((el) =>
-          el.id === payload ? { ...el, count: (prev) => prev + 1 } : el
+          el.id == payload ? { ...el, count: (count) =>count  + 1 } : el
         ),
       };
     case DEC_COUNTER:
       return {
         ...store,
         todos: store.todos.map((el) =>
-          el.id === payload ? { ...el, count: (prev) => prev - 1 } : el
+          el.id == payload ? { ...el, count: (count) => count - 1 } : el
         ),
       };
 
