@@ -15,11 +15,7 @@ describe("Testing routing Application", () => {
 
   describe("App component should", () => {
     beforeEach(() => {
-      render(
-        <Provider store={store}>
-          <App />
-        </Provider>
-      );
+      render(<App />);
     });
 
     it("render App and check structure", async () => {

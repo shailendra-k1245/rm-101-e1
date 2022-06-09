@@ -27,7 +27,7 @@ const Task = (props) => {
         type="checkbox"
         data-testid="task-checkbox"
         checked={props.data.done == true ? true : false}
-        onClick={handleRadio}
+        onChange={handleRadio}
       />
       <div
         data-testid="task-text"
