@@ -21,7 +21,7 @@ const Counter = ({ count, id }) => {
       <span data-testid="task-counter-value">{count}</span>
       <button
         data-testid="task-counter-decrement-button"
-        onClick={() => decCounter(id)}
+        onClick={() => dispatch(decCounter(id))}
       >
         <AiOutlineMinus />
       </button>
