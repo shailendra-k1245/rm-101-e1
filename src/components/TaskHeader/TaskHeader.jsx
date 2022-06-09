@@ -14,11 +14,7 @@ const TaskHeader = () => {
 
   const unCompletedTask = c;
 
-  // sample values to be replaced
-  // let totalTask = 0;
-  // let unCompletedTask = 0;
-
-  // NOTE: do not delete `data-testid` key value pair
+ 
   return (
     <div data-testid="task-header" className={styles.taskHeader}>
       <h1>Todo List</h1>

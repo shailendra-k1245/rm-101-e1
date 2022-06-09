@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { addCounter, decCounter } from "../../Redux/action";
 
 const Counter = ({ count, id }) => {
-  
   const dispatch = useDispatch();
   // sample value to be replaced
   // let count = 0;
@@ -15,14 +14,14 @@ const Counter = ({ count, id }) => {
     <div className={styles.counter}>
       <button
         data-testid="task-counter-increment-button"
-        onClick={() => dispatch(addCounter(id,1))}
+        onClick={() => dispatch(addCounter(id))}
       >
         <AiOutlinePlus />
       </button>
       <span data-testid="task-counter-value">{count}</span>
       <button
         data-testid="task-counter-decrement-button"
-        onClick={() => decCounter(id,1)}
+        onClick={() => decCounter(id)}
       >
         <AiOutlineMinus />
       </button>

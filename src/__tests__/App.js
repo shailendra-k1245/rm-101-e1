@@ -4,6 +4,8 @@ import { fireEvent, render, screen, within } from "@testing-library/react";
 import App from "../App";
 // import Navbar from "../Components/Navbar/index";
 import tasks from "../data/tasks.json";
+import { Provider } from "react-redux";
+import { store } from "../Redux/store";
 
 describe("Testing routing Application", () => {
   beforeAll(() => {
@@ -13,7 +15,11 @@ describe("Testing routing Application", () => {
 
   describe("App component should", () => {
     beforeEach(() => {
-      render(<App />);
+      render(
+        <Provider store={store}>
+          <App />
+        </Provider>
+      );
     });
 
     it("render App and check structure", async () => {
